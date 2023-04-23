@@ -57,8 +57,8 @@ Math2.randomBool = function(chance)
 // $(window).resize(resize)
 // window.onorientationchange = resize;
 
-var width = 800;
-var height = 600;
+var width = 480;
+var height = 320;
 
 // var wabbitTexture;
 // var pirateTexture;
@@ -86,6 +86,28 @@ let bunnyType = 0;
 
 function onReady()
 {
+	
+	const canvas = document.querySelector("body > canvas")
+	canvas.style.cssText = `width: 480px; height: 320px; padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;`;
+	
+	// 	<style type="text/css"> 
+// 		.centered {  
+// 	  position:fixed;
+// 	  z-index: 100;  
+// 	  top:50%;  
+// 	  left:50%;  
+// 	  margin:-100px 0 0 -100px;  
+// 	  width:200px;  
+// 	  height:200px;  
+// 	}  
+// 	</style>`;
 	
 // 	renderer = PIXI.autoDetectRenderer(800, 600, {backgroundColor:0xFFFFFF});
 // 	stage = new PIXI.Stage(0xFFFFFF);
@@ -293,14 +315,14 @@ var Stats = function() {
         b.preventDefault();
         t(++s % 2)
     }, !1);
-    f.style.cssText = "width:80px;opacity:0.9;cursor:pointer";
+    f.style.cssText = "width:100px;opacity:0.9;cursor:pointer";
     var a = document.createElement("div");
     a.id = "fps";
     a.style.cssText = "padding:0 0 3px 3px;text-align:left;background-color:#002";
     f.appendChild(a);
     var i = document.createElement("div");
     i.id = "fpsText";
-    i.style.cssText = "color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:bold;line-height:15px";
+    i.style.cssText = "color:#0ff;font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:bold;line-height:15px";
     i.innerHTML = "FPS";
     a.appendChild(i);
     var c = document.createElement("div");
